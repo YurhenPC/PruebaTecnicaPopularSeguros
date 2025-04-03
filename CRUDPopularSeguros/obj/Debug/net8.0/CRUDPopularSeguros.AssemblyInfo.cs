@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CRUDPopularSeguros")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6dc52f80cada33cde645c2121884273c06d1ea7a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+95779f6c27b529345077f795abb1fa15b3ad6000")]
 [assembly: System.Reflection.AssemblyProductAttribute("CRUDPopularSeguros")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CRUDPopularSeguros")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

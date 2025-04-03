@@ -25,10 +25,11 @@ public partial class PruebaTecnicaPopularSegurosContext : DbContext
 
     public virtual DbSet<TipoPoliza> TipoPolizas { get; set; }
 
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Data Source=DESKTOP-TUQ4266;Initial Catalog=PruebaTecnicaPopularSeguros;Integrated Security=True;Trusted_Connection=True;TrustServerCertificate=True;");
+    public virtual DbSet<Usuario> Usuarios { get; set; }
 
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder){
+    
+    }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Cliente>(entity =>
@@ -103,6 +104,29 @@ public partial class PruebaTecnicaPopularSegurosContext : DbContext
             entity.Property(e => e.Descripcion)
                 .HasMaxLength(50)
                 .IsUnicode(false);
+        });
+
+        modelBuilder.Entity<Usuario>(entity =>
+        {
+            entity
+                .HasNoKey()
+                .ToTable("Usuario");
+
+            entity.Property(e => e.Correo)
+                .HasMaxLength(50)
+                .HasColumnName("correo");
+            entity.Property(e => e.Id)
+                .ValueGeneratedOnAdd()
+                .HasColumnName("id");
+            entity.Property(e => e.Nombre)
+                .IsUnicode(false)
+                .HasColumnName("nombre");
+            entity.Property(e => e.Password)
+                .HasMaxLength(50)
+                .HasColumnName("password");
+            entity.Property(e => e.Username)
+                .HasMaxLength(50)
+                .HasColumnName("username");
         });
 
         OnModelCreatingPartial(modelBuilder);
