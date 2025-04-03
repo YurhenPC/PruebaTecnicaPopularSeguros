@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\yurbo\\source\\repos\\CRUDPopularSeguros\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8B739DDD-68CB-43B2-BB0C-E272A94992C6}|CRUDPopularSeguros\\CRUDPopularSeguros.csproj|c:\\users\\yurbo\\source\\repos\\crudpopularseguros\\crudpopularseguros\\controllers\\polizacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B739DDD-68CB-43B2-BB0C-E272A94992C6}|CRUDPopularSeguros\\CRUDPopularSeguros.csproj|solutionrelative:crudpopularseguros\\controllers\\polizacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B739DDD-68CB-43B2-BB0C-E272A94992C6}|CRUDPopularSeguros\\CRUDPopularSeguros.csproj|c:\\users\\yurbo\\source\\repos\\crudpopularseguros\\crudpopularseguros\\models\\pruebatecnicapopularseguroscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B739DDD-68CB-43B2-BB0C-E272A94992C6}|CRUDPopularSeguros\\CRUDPopularSeguros.csproj|solutionrelative:crudpopularseguros\\models\\pruebatecnicapopularseguroscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PruebaTecnicaPopularSegurosContext.cs",
+              "DocumentMoniker": "C:\\Users\\yurbo\\source\\repos\\CRUDPopularSeguros\\CRUDPopularSeguros\\Models\\PruebaTecnicaPopularSegurosContext.cs",
+              "RelativeDocumentMoniker": "CRUDPopularSeguros\\Models\\PruebaTecnicaPopularSegurosContext.cs",
+              "ToolTip": "C:\\Users\\yurbo\\source\\repos\\CRUDPopularSeguros\\CRUDPopularSeguros\\Models\\PruebaTecnicaPopularSegurosContext.cs",
+              "RelativeToolTip": "CRUDPopularSeguros\\Models\\PruebaTecnicaPopularSegurosContext.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T03:17:08.754Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PolizaController.cs",
+              "DocumentMoniker": "C:\\Users\\yurbo\\source\\repos\\CRUDPopularSeguros\\CRUDPopularSeguros\\Controllers\\PolizaController.cs",
+              "RelativeDocumentMoniker": "CRUDPopularSeguros\\Controllers\\PolizaController.cs",
+              "ToolTip": "C:\\Users\\yurbo\\source\\repos\\CRUDPopularSeguros\\CRUDPopularSeguros\\Controllers\\PolizaController.cs",
+              "RelativeToolTip": "CRUDPopularSeguros\\Controllers\\PolizaController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T03:02:55.803Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

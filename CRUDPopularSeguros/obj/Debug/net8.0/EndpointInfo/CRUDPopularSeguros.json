@@ -1,0 +1,341 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "CRUDPopularSeguros",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/Poliza/Lista": {
+      "get": {
+        "tags": [
+          "Poliza"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Poliza/Obtener/{cedulaAsegurado}": {
+      "get": {
+        "tags": [
+          "Poliza"
+        ],
+        "parameters": [
+          {
+            "name": "cedula",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "cedulaAsegurado",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Poliza/Nuevo": {
+      "post": {
+        "tags": [
+          "Poliza"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Poliza"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Poliza"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Poliza"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Poliza/Editar": {
+      "put": {
+        "tags": [
+          "Poliza"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Poliza"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Poliza"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Poliza"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Poliza/Eliminar/{cedulaAsegurado}": {
+      "delete": {
+        "tags": [
+          "Poliza"
+        ],
+        "parameters": [
+          {
+            "name": "cedula",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "cedulaAsegurado",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/WeatherForecast": {
+      "get": {
+        "tags": [
+          "WeatherForecast"
+        ],
+        "operationId": "GetWeatherForecast",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WeatherForecast"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WeatherForecast"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WeatherForecast"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Cobertura": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "codigo": {
+            "type": "string",
+            "nullable": true
+          },
+          "descripcion": {
+            "type": "string",
+            "nullable": true
+          },
+          "polizas": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Poliza"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Estado": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "estado1": {
+            "type": "string",
+            "nullable": true
+          },
+          "polizas": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Poliza"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Poliza": {
+        "type": "object",
+        "properties": {
+          "numeroPoliza": {
+            "type": "string",
+            "nullable": true
+          },
+          "tipoPoliza": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cedulaAsegurado": {
+            "type": "string",
+            "nullable": true
+          },
+          "montoAsegurado": {
+            "type": "number",
+            "format": "double"
+          },
+          "fechaVencimiento": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "fechaEmision": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "coberturas": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "estadoPoliza": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "prima": {
+            "type": "number",
+            "format": "double"
+          },
+          "periodo": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "fechaInclusion": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "aseguradora": {
+            "type": "string",
+            "nullable": true
+          },
+          "coberturasNavigation": {
+            "$ref": "#/components/schemas/Cobertura"
+          },
+          "estadoPolizaNavigation": {
+            "$ref": "#/components/schemas/Estado"
+          },
+          "tipoPolizaNavigation": {
+            "$ref": "#/components/schemas/TipoPoliza"
+          }
+        },
+        "additionalProperties": false
+      },
+      "TipoPoliza": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "codigo": {
+            "type": "string",
+            "nullable": true
+          },
+          "descripcion": {
+            "type": "string",
+            "nullable": true
+          },
+          "polizas": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Poliza"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "WeatherForecast": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "type": "string",
+            "format": "date"
+          },
+          "temperatureC": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "temperatureF": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "summary": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

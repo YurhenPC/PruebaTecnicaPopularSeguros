@@ -1,0 +1,6 @@
+@CRUDPopularSeguros_HostAddress = http://localhost:5003
+
+GET {{CRUDPopularSeguros_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
