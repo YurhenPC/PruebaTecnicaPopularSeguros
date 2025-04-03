@@ -179,52 +179,6 @@
   },
   "components": {
     "schemas": {
-      "Cobertura": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "codigo": {
-            "type": "string",
-            "nullable": true
-          },
-          "descripcion": {
-            "type": "string",
-            "nullable": true
-          },
-          "polizas": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Poliza"
-            },
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "Estado": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "estado1": {
-            "type": "string",
-            "nullable": true
-          },
-          "polizas": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Poliza"
-            },
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
       "Poliza": {
         "type": "object",
         "properties": {
@@ -274,40 +228,6 @@
           },
           "aseguradora": {
             "type": "string",
-            "nullable": true
-          },
-          "coberturasNavigation": {
-            "$ref": "#/components/schemas/Cobertura"
-          },
-          "estadoPolizaNavigation": {
-            "$ref": "#/components/schemas/Estado"
-          },
-          "tipoPolizaNavigation": {
-            "$ref": "#/components/schemas/TipoPoliza"
-          }
-        },
-        "additionalProperties": false
-      },
-      "TipoPoliza": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "codigo": {
-            "type": "string",
-            "nullable": true
-          },
-          "descripcion": {
-            "type": "string",
-            "nullable": true
-          },
-          "polizas": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Poliza"
-            },
             "nullable": true
           }
         },

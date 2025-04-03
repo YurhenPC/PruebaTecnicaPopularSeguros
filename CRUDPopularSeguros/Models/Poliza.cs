@@ -28,10 +28,4 @@ public partial class Poliza
     public DateTime FechaInclusion { get; set; }
 
     public string Aseguradora { get; set; } = null!;
-
-    public virtual Cobertura CoberturasNavigation { get; set; } = null!;
-
-    public virtual Estado EstadoPolizaNavigation { get; set; } = null!;
-
-    public virtual TipoPoliza TipoPolizaNavigation { get; set; } = null!;
 }

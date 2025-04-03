@@ -10,6 +10,4 @@ public partial class TipoPoliza
     public string Codigo { get; set; } = null!;
 
     public string Descripcion { get; set; } = null!;
-
-    public virtual ICollection<Poliza> Polizas { get; set; } = new List<Poliza>();
 }

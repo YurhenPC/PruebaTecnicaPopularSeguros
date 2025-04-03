@@ -8,6 +8,4 @@ public partial class Estado
     public int Id { get; set; }
 
     public string Estado1 { get; set; } = null!;
-
-    public virtual ICollection<Poliza> Polizas { get; set; } = new List<Poliza>();
 }
