@@ -390,7 +390,7 @@ const Polizas = () => {
                 <td>{p.periodo}</td>
                 <td>{p.aseguradora}</td>
                 <td>
-                  <Button className="me-2" onClick={() => setForm(p)}>
+                  <Button className="me-2" onClick={() => { setForm(p); setIsOpen(true); }}>
                     <i className="bi bi-pencil-fill me-1"></i>
                   </Button>
                   <Button class="btn btn-danger" onClick={() => deletePoliza(p.cedulaAsegurado).then(loadPolizas)}>
