@@ -10,7 +10,7 @@ const Polizas = () => {
   const [filtros, setFiltros] = useState({ numeroPoliza: '', tipoPoliza: '', fechaVencimiento: '', cedulaAsegurado: '', nombre: '', primerApellido: '', segundoApellido: '' });
   const [form, setForm] = useState({ numeroPoliza: '', tipoPoliza: '', cedulaAsegurado: '', montoAsegurado: '', fechaVencimiento: '', fechaEmision: '', coberturas: '', estadoPoliza: '', prima: '', periodo: '', fechaInclusion: '', aseguradora: ''
     , cliente: {
-      cedulaAsegurado: '112345678',
+      cedulaAsegurado: '',
       nombre: 'Juan',
       primerApellido: 'Perez',
       segundoApellido: 'Gomez',
@@ -63,6 +63,27 @@ const Polizas = () => {
         console.error('Error al cargar las coberturas:', error);
       });
 
+      updatePoliza().then(res => {
+        const data = res.data;
+        setForm({
+          numeroPoliza: data.numeroPoliza,
+          tipoPoliza: data.tipoPoliza,
+          cedulaAsegurado: data.cedulaAsegurado,
+          montoAsegurado: data.montoAsegurado,
+          fechaVencimiento: data.fechaVencimiento.split('T')[0],
+          fechaEmision: data.fechaEmision.split('T')[0],
+          coberturas: data.coberturas,
+          estadoPoliza: data.estadoPoliza,
+          prima: data.prima,
+          periodo: data.periodo.split('T')[0],
+          fechaInclusion: data.fechaInclusion.split('T')[0],
+          aseguradora: data.aseguradora
+        });
+      })
+      .catch(error => {
+        console.error('Error cargando póliza:', error);
+      });
+
     loadPolizas();
     // loadTipoPolizas();
   }, []);
@@ -77,16 +98,6 @@ const Polizas = () => {
       console.error(err);
     }
   };
-
-  // const loadTipoPolizas = async () => {
-  //   try {
-  //     const response = await getTipoPolizas();
-  //     setTipoPolizas(response.data);
-  //   } catch (err) {
-  //     setError("Error al cargar tipos de pólizas");
-  //     console.error(err);
-  //   }
-  // };
 
   const filtrarPolizas = polizas.filter((p) => {
     return (
@@ -107,11 +118,19 @@ const Polizas = () => {
       [name]: value,
     }));
   };
-
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsOpen(false);
-    await createPoliza(form);
+    const formCompleto = {
+      ...form,
+      cliente: {
+        ...form.cliente,
+        cedulaAsegurado: form.cedulaAsegurado
+      }
+    };
+    if (form.numeroPoliza) await updatePoliza(form.numeroPoliza, formCompleto);
+        else await createPoliza(formCompleto);
     setForm({
       numeroPoliza: ''
       , tipoPoliza: ''
@@ -246,8 +265,8 @@ const Polizas = () => {
                   </Col>
                 </Row>
                 <div style={{ display: 'flex', gap: 10 }}>
-                  {/* <Button variant="success" type="submit">{form.numeroPoliza ? "Actualizar" : "Crear"}</Button> */}
-                  <button type="submit" style={{ flex: 1, background: '#2ecc71', color: '#fff', padding: 10, border: 'none', borderRadius: 5 }}>Guardar</button>
+                  <Button variant="success" type="submit">{form.numeroPoliza ? "Actualizar" : "Crear"}</Button>
+                  {/* <button type="submit" style={{ flex: 1, background: '#2ecc71', color: '#fff', padding: 10, border: 'none', borderRadius: 5 }}>Guardar</button> */}
                   <button type="button" onClick={() => setIsOpen(false)} style={{ flex: 1, background: '#e74c3c', color: '#fff', padding: 10, border: 'none', borderRadius: 5 }}>Cancelar</button>
                 </div>
 
