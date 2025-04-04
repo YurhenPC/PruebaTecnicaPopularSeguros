@@ -1,0 +1,148 @@
+[
+  {
+    "ContainingType": "CRUDPopularSeguros.Controllers.CoberturasController",
+    "Method": "Get",
+    "RelativePath": "api/Coberturas/Lista",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CRUDPopularSeguros.Controllers.EstadoPolizaController",
+    "Method": "Get",
+    "RelativePath": "api/EstadoPoliza/Lista",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CRUDPopularSeguros.Controllers.PolizaController",
+    "Method": "Editar",
+    "RelativePath": "api/Poliza/Editar/{numeroPoliza}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "numeroPoliza",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "objeto",
+        "Type": "CRUDPopularSeguros.Models.Poliza",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CRUDPopularSeguros.Controllers.PolizaController",
+    "Method": "Eliminar",
+    "RelativePath": "api/Poliza/Eliminar/{cedulaAsegurado}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cedulaAsegurado",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CRUDPopularSeguros.Controllers.PolizaController",
+    "Method": "Get",
+    "RelativePath": "api/Poliza/Lista",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CRUDPopularSeguros.Controllers.PolizaController",
+    "Method": "Nuevo",
+    "RelativePath": "api/Poliza/Nuevo",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "objeto",
+        "Type": "CRUDPopularSeguros.Models.Poliza",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CRUDPopularSeguros.Controllers.PolizaController",
+    "Method": "GetObtener",
+    "RelativePath": "api/Poliza/Obtener/{cedulaAsegurado}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cedulaAsegurado",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CRUDPopularSeguros.Controllers.TipoPolizaController",
+    "Method": "Get",
+    "RelativePath": "api/TipoPoliza/Lista",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CRUDPopularSeguros.Controllers.UsuarioController",
+    "Method": "PostLogin",
+    "RelativePath": "api/Usuario/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "data",
+        "Type": "CRUDPopularSeguros.DTO.LoginRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CRUDPopularSeguros.Controllers.WeatherForecastController",
+    "Method": "Get",
+    "RelativePath": "WeatherForecast",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[CRUDPopularSeguros.WeatherForecast, CRUDPopularSeguros, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetWeatherForecast"
+  }
+]

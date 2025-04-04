@@ -1,0 +1,194 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\yurbo\\source\\repos\\CRUDPopularSeguros\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8B739DDD-68CB-43B2-BB0C-E272A94992C6}|CRUDPopularSeguros\\CRUDPopularSeguros.csproj|c:\\users\\yurbo\\source\\repos\\crudpopularseguros\\crudpopularseguros\\models\\pruebatecnicapopularseguroscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B739DDD-68CB-43B2-BB0C-E272A94992C6}|CRUDPopularSeguros\\CRUDPopularSeguros.csproj|solutionrelative:crudpopularseguros\\models\\pruebatecnicapopularseguroscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B739DDD-68CB-43B2-BB0C-E272A94992C6}|CRUDPopularSeguros\\CRUDPopularSeguros.csproj|c:\\users\\yurbo\\source\\repos\\crudpopularseguros\\crudpopularseguros\\controllers\\polizacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B739DDD-68CB-43B2-BB0C-E272A94992C6}|CRUDPopularSeguros\\CRUDPopularSeguros.csproj|solutionrelative:crudpopularseguros\\controllers\\polizacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B739DDD-68CB-43B2-BB0C-E272A94992C6}|CRUDPopularSeguros\\CRUDPopularSeguros.csproj|c:\\users\\yurbo\\source\\repos\\crudpopularseguros\\crudpopularseguros\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B739DDD-68CB-43B2-BB0C-E272A94992C6}|CRUDPopularSeguros\\CRUDPopularSeguros.csproj|solutionrelative:crudpopularseguros\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B739DDD-68CB-43B2-BB0C-E272A94992C6}|CRUDPopularSeguros\\CRUDPopularSeguros.csproj|c:\\users\\yurbo\\source\\repos\\crudpopularseguros\\crudpopularseguros\\controllers\\coberturascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B739DDD-68CB-43B2-BB0C-E272A94992C6}|CRUDPopularSeguros\\CRUDPopularSeguros.csproj|solutionrelative:crudpopularseguros\\controllers\\coberturascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B739DDD-68CB-43B2-BB0C-E272A94992C6}|CRUDPopularSeguros\\CRUDPopularSeguros.csproj|c:\\users\\yurbo\\source\\repos\\crudpopularseguros\\crudpopularseguros\\controllers\\estadopolizacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B739DDD-68CB-43B2-BB0C-E272A94992C6}|CRUDPopularSeguros\\CRUDPopularSeguros.csproj|solutionrelative:crudpopularseguros\\controllers\\estadopolizacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B739DDD-68CB-43B2-BB0C-E272A94992C6}|CRUDPopularSeguros\\CRUDPopularSeguros.csproj|c:\\users\\yurbo\\source\\repos\\crudpopularseguros\\crudpopularseguros\\dto\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B739DDD-68CB-43B2-BB0C-E272A94992C6}|CRUDPopularSeguros\\CRUDPopularSeguros.csproj|solutionrelative:crudpopularseguros\\dto\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B739DDD-68CB-43B2-BB0C-E272A94992C6}|CRUDPopularSeguros\\CRUDPopularSeguros.csproj|c:\\users\\yurbo\\source\\repos\\crudpopularseguros\\crudpopularseguros\\models\\estadopoliza.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B739DDD-68CB-43B2-BB0C-E272A94992C6}|CRUDPopularSeguros\\CRUDPopularSeguros.csproj|solutionrelative:crudpopularseguros\\models\\estadopoliza.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B739DDD-68CB-43B2-BB0C-E272A94992C6}|CRUDPopularSeguros\\CRUDPopularSeguros.csproj|c:\\users\\yurbo\\source\\repos\\crudpopularseguros\\crudpopularseguros\\controllers\\tipopolizacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B739DDD-68CB-43B2-BB0C-E272A94992C6}|CRUDPopularSeguros\\CRUDPopularSeguros.csproj|solutionrelative:crudpopularseguros\\controllers\\tipopolizacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B739DDD-68CB-43B2-BB0C-E272A94992C6}|CRUDPopularSeguros\\CRUDPopularSeguros.csproj|c:\\users\\yurbo\\source\\repos\\crudpopularseguros\\crudpopularseguros\\models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B739DDD-68CB-43B2-BB0C-E272A94992C6}|CRUDPopularSeguros\\CRUDPopularSeguros.csproj|solutionrelative:crudpopularseguros\\models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B739DDD-68CB-43B2-BB0C-E272A94992C6}|CRUDPopularSeguros\\CRUDPopularSeguros.csproj|c:\\users\\yurbo\\source\\repos\\crudpopularseguros\\crudpopularseguros\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B739DDD-68CB-43B2-BB0C-E272A94992C6}|CRUDPopularSeguros\\CRUDPopularSeguros.csproj|solutionrelative:crudpopularseguros\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CoberturasController.cs",
+              "DocumentMoniker": "C:\\Users\\yurbo\\source\\repos\\CRUDPopularSeguros\\CRUDPopularSeguros\\Controllers\\CoberturasController.cs",
+              "RelativeDocumentMoniker": "CRUDPopularSeguros\\Controllers\\CoberturasController.cs",
+              "ToolTip": "C:\\Users\\yurbo\\source\\repos\\CRUDPopularSeguros\\CRUDPopularSeguros\\Controllers\\CoberturasController.cs",
+              "RelativeToolTip": "CRUDPopularSeguros\\Controllers\\CoberturasController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-04T20:28:13.427Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PolizaController.cs",
+              "DocumentMoniker": "C:\\Users\\yurbo\\source\\repos\\CRUDPopularSeguros\\CRUDPopularSeguros\\Controllers\\PolizaController.cs",
+              "RelativeDocumentMoniker": "CRUDPopularSeguros\\Controllers\\PolizaController.cs",
+              "ToolTip": "C:\\Users\\yurbo\\source\\repos\\CRUDPopularSeguros\\CRUDPopularSeguros\\Controllers\\PolizaController.cs",
+              "RelativeToolTip": "CRUDPopularSeguros\\Controllers\\PolizaController.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBUAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T17:26:50.618Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PruebaTecnicaPopularSegurosContext.cs",
+              "DocumentMoniker": "C:\\Users\\yurbo\\source\\repos\\CRUDPopularSeguros\\CRUDPopularSeguros\\Models\\PruebaTecnicaPopularSegurosContext.cs",
+              "RelativeDocumentMoniker": "CRUDPopularSeguros\\Models\\PruebaTecnicaPopularSegurosContext.cs",
+              "ToolTip": "C:\\Users\\yurbo\\source\\repos\\CRUDPopularSeguros\\CRUDPopularSeguros\\Models\\PruebaTecnicaPopularSegurosContext.cs",
+              "RelativeToolTip": "CRUDPopularSeguros\\Models\\PruebaTecnicaPopularSegurosContext.cs",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAawFgAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-04T05:30:10.602Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UsuarioController.cs",
+              "DocumentMoniker": "C:\\Users\\yurbo\\source\\repos\\CRUDPopularSeguros\\CRUDPopularSeguros\\Controllers\\UsuarioController.cs",
+              "RelativeDocumentMoniker": "CRUDPopularSeguros\\Controllers\\UsuarioController.cs",
+              "ToolTip": "C:\\Users\\yurbo\\source\\repos\\CRUDPopularSeguros\\CRUDPopularSeguros\\Controllers\\UsuarioController.cs",
+              "RelativeToolTip": "CRUDPopularSeguros\\Controllers\\UsuarioController.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwBQAAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T17:30:33.281Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EstadoPolizaController.cs",
+              "DocumentMoniker": "C:\\Users\\yurbo\\source\\repos\\CRUDPopularSeguros\\CRUDPopularSeguros\\Controllers\\EstadoPolizaController.cs",
+              "RelativeDocumentMoniker": "CRUDPopularSeguros\\Controllers\\EstadoPolizaController.cs",
+              "ToolTip": "C:\\Users\\yurbo\\source\\repos\\CRUDPopularSeguros\\CRUDPopularSeguros\\Controllers\\EstadoPolizaController.cs",
+              "RelativeToolTip": "CRUDPopularSeguros\\Controllers\\EstadoPolizaController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-04T19:48:31.798Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "EstadoPoliza.cs",
+              "DocumentMoniker": "C:\\Users\\yurbo\\source\\repos\\CRUDPopularSeguros\\CRUDPopularSeguros\\Models\\EstadoPoliza.cs",
+              "RelativeDocumentMoniker": "CRUDPopularSeguros\\Models\\EstadoPoliza.cs",
+              "ToolTip": "C:\\Users\\yurbo\\source\\repos\\CRUDPopularSeguros\\CRUDPopularSeguros\\Models\\EstadoPoliza.cs",
+              "RelativeToolTip": "CRUDPopularSeguros\\Models\\EstadoPoliza.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-04T19:50:40.469Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LoginRequest.cs",
+              "DocumentMoniker": "C:\\Users\\yurbo\\source\\repos\\CRUDPopularSeguros\\CRUDPopularSeguros\\DTO\\LoginRequest.cs",
+              "RelativeDocumentMoniker": "CRUDPopularSeguros\\DTO\\LoginRequest.cs",
+              "ToolTip": "C:\\Users\\yurbo\\source\\repos\\CRUDPopularSeguros\\CRUDPopularSeguros\\DTO\\LoginRequest.cs",
+              "RelativeToolTip": "CRUDPopularSeguros\\DTO\\LoginRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAUAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-04T06:57:32.01Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "TipoPolizaController.cs",
+              "DocumentMoniker": "C:\\Users\\yurbo\\source\\repos\\CRUDPopularSeguros\\CRUDPopularSeguros\\Controllers\\TipoPolizaController.cs",
+              "RelativeDocumentMoniker": "CRUDPopularSeguros\\Controllers\\TipoPolizaController.cs",
+              "ToolTip": "C:\\Users\\yurbo\\source\\repos\\CRUDPopularSeguros\\CRUDPopularSeguros\\Controllers\\TipoPolizaController.cs",
+              "RelativeToolTip": "CRUDPopularSeguros\\Controllers\\TipoPolizaController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABUAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-04T00:40:31.43Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\yurbo\\source\\repos\\CRUDPopularSeguros\\CRUDPopularSeguros\\Program.cs",
+              "RelativeDocumentMoniker": "CRUDPopularSeguros\\Program.cs",
+              "ToolTip": "C:\\Users\\yurbo\\source\\repos\\CRUDPopularSeguros\\CRUDPopularSeguros\\Program.cs",
+              "RelativeToolTip": "CRUDPopularSeguros\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-04T04:06:52.082Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Cliente.cs",
+              "DocumentMoniker": "C:\\Users\\yurbo\\source\\repos\\CRUDPopularSeguros\\CRUDPopularSeguros\\Models\\Cliente.cs",
+              "RelativeDocumentMoniker": "CRUDPopularSeguros\\Models\\Cliente.cs",
+              "ToolTip": "C:\\Users\\yurbo\\source\\repos\\CRUDPopularSeguros\\CRUDPopularSeguros\\Models\\Cliente.cs",
+              "RelativeToolTip": "CRUDPopularSeguros\\Models\\Cliente.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAYwBEAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-04T05:34:38.386Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
