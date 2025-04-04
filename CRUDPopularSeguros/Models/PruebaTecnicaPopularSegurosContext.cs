@@ -27,9 +27,11 @@ public partial class PruebaTecnicaPopularSegurosContext : DbContext
 
     public virtual DbSet<Usuario> Usuarios { get; set; }
 
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder){
-    
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    {
+
     }
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Cliente>(entity =>
@@ -112,6 +114,7 @@ public partial class PruebaTecnicaPopularSegurosContext : DbContext
                 .HasNoKey()
                 .ToTable("Usuario");
 
+            entity.Property(e => e.Activo).HasColumnName("activo");
             entity.Property(e => e.Correo)
                 .HasMaxLength(50)
                 .HasColumnName("correo");

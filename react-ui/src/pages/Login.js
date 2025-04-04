@@ -26,7 +26,7 @@ function Login() {
 
   const iniciarSesion = async () => {
     alert("Bienvenido: Jeffry");
-    navigate("/menu");
+    navigate("/polizas");
     // Primero, hacer la solicitud a la API
 //     await axios
 //       .get(baseUrl + `/${form.username}/${md5(form.password)}`)
@@ -60,7 +60,7 @@ function Login() {
 
   useEffect(() => {
     if (cookies.get("id")) {
-      navigate("/menu"); // Si el usuario ya está logueado, redirigir
+      navigate("/polizas"); // Si el usuario ya está logueado, redirigir
     }
   }, [cookies, navigate]);
 

@@ -84,6 +84,37 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "CRUDPopularSeguros.Controllers.TipoPolizaController",
+    "Method": "Get",
+    "RelativePath": "api/TipoPoliza/Lista",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CRUDPopularSeguros.Controllers.UsuarioController",
+    "Method": "GetLogin",
+    "RelativePath": "api/Usuario/Login",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "username",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "password",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "CRUDPopularSeguros.Controllers.WeatherForecastController",
     "Method": "Get",
     "RelativePath": "WeatherForecast",
