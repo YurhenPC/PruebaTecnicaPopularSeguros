@@ -28,4 +28,6 @@ public partial class Poliza
     public DateTime FechaInclusion { get; set; }
 
     public string Aseguradora { get; set; } = null!;
+
+    public Cliente Cliente { get; set; }
 }

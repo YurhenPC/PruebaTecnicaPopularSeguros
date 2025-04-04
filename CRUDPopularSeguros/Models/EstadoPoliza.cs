@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 namespace CRUDPopularSeguros.Models;
 
-public partial class Estado
+public partial class EstadoPoliza
 {
     public int Id { get; set; }
 
-    public string Estado1 { get; set; } = null!;
+    public string Estado { get; set; } = null!;
 }

@@ -1,12 +1,37 @@
 [
   {
+    "ContainingType": "CRUDPopularSeguros.Controllers.CoberturasController",
+    "Method": "Get",
+    "RelativePath": "api/Coberturas/Lista",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CRUDPopularSeguros.Controllers.EstadoPolizaController",
+    "Method": "Get",
+    "RelativePath": "api/EstadoPoliza/Lista",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "CRUDPopularSeguros.Controllers.PolizaController",
     "Method": "Editar",
-    "RelativePath": "api/Poliza/Editar",
+    "RelativePath": "api/Poliza/Editar/{numeroPoliza}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [
+      {
+        "Name": "numeroPoliza",
+        "Type": "System.String",
+        "IsRequired": true
+      },
       {
         "Name": "objeto",
         "Type": "CRUDPopularSeguros.Models.Poliza",
@@ -24,13 +49,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "cedula",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
         "Name": "cedulaAsegurado",
-        "Type": "",
+        "Type": "System.String",
         "IsRequired": true
       }
     ],
@@ -71,13 +91,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "cedula",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
         "Name": "cedulaAsegurado",
-        "Type": "",
+        "Type": "System.String",
         "IsRequired": true
       }
     ],
@@ -95,21 +110,16 @@
   },
   {
     "ContainingType": "CRUDPopularSeguros.Controllers.UsuarioController",
-    "Method": "GetLogin",
+    "Method": "PostLogin",
     "RelativePath": "api/Usuario/Login",
-    "HttpMethod": "GET",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "username",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "password",
-        "Type": "System.String",
-        "IsRequired": false
+        "Name": "data",
+        "Type": "CRUDPopularSeguros.DTO.LoginRequest",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []

@@ -19,15 +19,22 @@ namespace CRUDPopularSeguros.Controllers
         [Route("Lista")]
         public async Task<IActionResult> Get()
         {
-            var listaPolizas = await dbContext.Polizas.ToListAsync();
+            var listaPolizas = await dbContext.Polizas.Include(x=> x.Cliente).Select(x => new
+            {
+                x.NumeroPoliza, x.Cliente.CedulaAsegurado, x.FechaVencimiento, x.TipoPoliza, x.Cliente.Nombre,
+                x.Cliente.PrimerApellido, x.Cliente.SegundoApellido, x.MontoAsegurado, x.FechaInclusion, x.FechaEmision,
+                x.Coberturas, x.EstadoPoliza, x.Periodo, x.Prima,x.Aseguradora
+            })
+
+                .ToListAsync();
             return StatusCode(StatusCodes.Status200OK, listaPolizas);
         }
 
         [HttpGet]
         [Route("Obtener/{cedulaAsegurado}")]
-        public async Task<IActionResult> GetObtener(String cedula)
+        public async Task<IActionResult> GetObtener(String cedulaAsegurado)
         {
-            var poliza = await dbContext.Polizas.FirstOrDefaultAsync(e => e.CedulaAsegurado == cedula);
+            var poliza = await dbContext.Polizas.FirstOrDefaultAsync(e => e.CedulaAsegurado == cedulaAsegurado);
             return StatusCode(StatusCodes.Status200OK, poliza);
         }
 
@@ -37,26 +44,62 @@ namespace CRUDPopularSeguros.Controllers
         [Route("Nuevo")]
         public async Task<IActionResult> Nuevo([FromBody] Poliza objeto)
         {
+            if (objeto == null)
+                return BadRequest("Datos inválidos");
+
+            var clienteExistente = await dbContext.Clientes
+                .FirstOrDefaultAsync(c => c.CedulaAsegurado == objeto.CedulaAsegurado);
+
+            if (clienteExistente == null)
+            {
+                dbContext.Clientes.Add(objeto.Cliente);
+            }
+            else
+            {
+                objeto.Cliente = clienteExistente;
+            }
+
             await dbContext.Polizas.AddAsync(objeto);
             await dbContext.SaveChangesAsync();
-            return StatusCode(StatusCodes.Status200OK, new { mensaje = "ok" });
+
+            return StatusCode(StatusCodes.Status200OK, new { mensaje = "Polizada creada correctamente" });
         }
 
 
         [HttpPut]
-        [Route("Editar")]
-        public async Task<IActionResult> Editar([FromBody] Poliza objeto)
+        [Route("Editar/{numeroPoliza}")]
+        public async Task<IActionResult> Editar(String numeroPoliza, [FromBody] Poliza objeto)
         {
-            dbContext.Polizas.Update(objeto);
+            var existePoliza = await dbContext.Polizas.FirstOrDefaultAsync(e => e.NumeroPoliza == numeroPoliza);
+
+            if (existePoliza == null)
+            {
+                return NotFound(new { mensaje = "Póliza no encontrada" });
+            }
+
+            // Actualizar los campos
+            existePoliza.TipoPoliza = objeto.TipoPoliza;
+            existePoliza.CedulaAsegurado = objeto.CedulaAsegurado;
+            existePoliza.MontoAsegurado = objeto.MontoAsegurado;
+            existePoliza.FechaVencimiento = objeto.FechaVencimiento;
+            existePoliza.FechaEmision = objeto.FechaEmision;
+            existePoliza.Coberturas = objeto.Coberturas;
+            existePoliza.EstadoPoliza = objeto.EstadoPoliza;
+            existePoliza.Prima = objeto.Prima;
+            existePoliza.Periodo = objeto.Periodo;
+            existePoliza.FechaInclusion = objeto.FechaInclusion;
+            existePoliza.Aseguradora = objeto.Aseguradora;
+
+            //dbContext.Polizas.Update(objeto);
             await dbContext.SaveChangesAsync();
-            return StatusCode(StatusCodes.Status200OK, new { mensaje = "ok" });
+            return StatusCode(StatusCodes.Status200OK, new { mensaje = "Póliza actualizada correctamente" });
         }
 
         [HttpDelete]
         [Route("Eliminar/{cedulaAsegurado}")]
-        public async Task<IActionResult> Eliminar(String cedula)
+        public async Task<IActionResult> Eliminar(String cedulaAsegurado)
         {
-            var poliza = await dbContext.Polizas.FirstOrDefaultAsync(e => e.CedulaAsegurado == cedula);
+            var poliza = await dbContext.Polizas.FirstOrDefaultAsync(e => e.CedulaAsegurado == cedulaAsegurado);
             dbContext.Polizas.Remove(poliza);
             await dbContext.SaveChangesAsync();
             return StatusCode(StatusCodes.Status200OK, new { mensaje = "ok" });

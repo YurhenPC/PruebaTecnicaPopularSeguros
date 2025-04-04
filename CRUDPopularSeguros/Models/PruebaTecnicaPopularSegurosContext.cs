@@ -19,7 +19,7 @@ public partial class PruebaTecnicaPopularSegurosContext : DbContext
 
     public virtual DbSet<Cobertura> Coberturas { get; set; }
 
-    public virtual DbSet<Estado> Estados { get; set; }
+    public virtual DbSet<EstadoPoliza> EstadosPoliza { get; set; }
 
     public virtual DbSet<Poliza> Polizas { get; set; }
 
@@ -65,14 +65,14 @@ public partial class PruebaTecnicaPopularSegurosContext : DbContext
                 .IsUnicode(false);
         });
 
-        modelBuilder.Entity<Estado>(entity =>
+        modelBuilder.Entity<EstadoPoliza>(entity =>
         {
-            entity.ToTable("Estado");
+            entity.ToTable("EstadoPoliza");
 
             entity.Property(e => e.Id)
                 .ValueGeneratedNever()
                 .HasColumnName("ID");
-            entity.Property(e => e.Estado1)
+            entity.Property(e => e.Estado)
                 .HasMaxLength(50)
                 .IsUnicode(false)
                 .HasColumnName("Estado");
@@ -82,6 +82,11 @@ public partial class PruebaTecnicaPopularSegurosContext : DbContext
         {
             entity.HasKey(e => e.NumeroPoliza);
 
+            entity.HasOne(e => e.Cliente)
+                .WithMany()
+                .HasForeignKey(e => e.CedulaAsegurado)
+                .HasPrincipalKey(c => c.CedulaAsegurado);
+        
             entity.Property(e => e.NumeroPoliza)
                 .HasMaxLength(50)
                 .IsUnicode(false);

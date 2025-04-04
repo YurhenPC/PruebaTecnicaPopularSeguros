@@ -5,6 +5,30 @@
     "version": "1.0"
   },
   "paths": {
+    "/api/Coberturas/Lista": {
+      "get": {
+        "tags": [
+          "Coberturas"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/EstadoPoliza/Lista": {
+      "get": {
+        "tags": [
+          "EstadoPoliza"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Poliza/Lista": {
       "get": {
         "tags": [
@@ -23,13 +47,6 @@
           "Poliza"
         ],
         "parameters": [
-          {
-            "name": "cedula",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "name": "cedulaAsegurado",
             "in": "path",
@@ -77,10 +94,20 @@
         }
       }
     },
-    "/api/Poliza/Editar": {
+    "/api/Poliza/Editar/{numeroPoliza}": {
       "put": {
         "tags": [
           "Poliza"
+        ],
+        "parameters": [
+          {
+            "name": "numeroPoliza",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
         ],
         "requestBody": {
           "content": {
@@ -115,13 +142,6 @@
         ],
         "parameters": [
           {
-            "name": "cedula",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
             "name": "cedulaAsegurado",
             "in": "path",
             "required": true,
@@ -150,26 +170,29 @@
       }
     },
     "/api/Usuario/Login": {
-      "get": {
+      "post": {
         "tags": [
           "Usuario"
         ],
-        "parameters": [
-          {
-            "name": "username",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "password",
-            "in": "query",
-            "schema": {
-              "type": "string"
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginRequest"
+              }
             }
           }
-        ],
+        },
         "responses": {
           "200": {
             "description": "OK"
@@ -219,6 +242,50 @@
   },
   "components": {
     "schemas": {
+      "Cliente": {
+        "type": "object",
+        "properties": {
+          "cedulaAsegurado": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombre": {
+            "type": "string",
+            "nullable": true
+          },
+          "primerApellido": {
+            "type": "string",
+            "nullable": true
+          },
+          "segundoApellido": {
+            "type": "string",
+            "nullable": true
+          },
+          "tipoPersona": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fechaNacimiento": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "LoginRequest": {
+        "type": "object",
+        "properties": {
+          "userName": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "Poliza": {
         "type": "object",
         "properties": {
@@ -269,6 +336,9 @@
           "aseguradora": {
             "type": "string",
             "nullable": true
+          },
+          "cliente": {
+            "$ref": "#/components/schemas/Cliente"
           }
         },
         "additionalProperties": false

@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using CRUDPopularSeguros.Models;
 using Microsoft.EntityFrameworkCore;
+using CRUDPopularSeguros.DTO;
 
 namespace CRUDPopularSeguros.Controllers
 {
@@ -15,11 +16,11 @@ namespace CRUDPopularSeguros.Controllers
             dbContext = _dbContext;
         }
 
-        [HttpGet]
+        [HttpPost]
         [Route("Login")]
-        public async Task<IActionResult> GetLogin(String username, String password)
+        public async Task<IActionResult> PostLogin([FromBody] LoginRequest data)
         {
-            var usuario = await dbContext.Usuarios.FirstOrDefaultAsync(e => e.Username == username && e.Password == password && e.Activo == 1);
+            var usuario = await dbContext.Usuarios.FirstOrDefaultAsync(e => e.Username == data.UserName && e.Password == data.Password && e.Activo == 1);
 
             if (usuario != null) {
                 return StatusCode(StatusCodes.Status200OK, usuario);
